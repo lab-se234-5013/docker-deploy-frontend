@@ -32,7 +32,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: timetitipon/234-deploylab-frontend:2.0
+          tags: timetitipon/234-deploylab-frontend-new:latest
 
       - name: Copy docker-compose file via SSH
         uses: appleboy/scp-action@v0.1.7
