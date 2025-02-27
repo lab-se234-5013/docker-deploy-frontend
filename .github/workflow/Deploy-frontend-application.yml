@@ -1,6 +1,6 @@
 name: Deploy frontend application
 
-on:
+'on':
   push:
     branches:
       - main
@@ -24,7 +24,10 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: Build and push
+      - name: Prepare the docker-compose run
+        run: ls -l
+
+      - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
@@ -41,7 +44,7 @@ jobs:
           source: "docker-compose.yml"
           target: "/home/ubuntu/frontend"
 
-      - name: Deploy via SSH
+      - name: Deploy using Docker Compose
         uses: appleboy/ssh-action@v1.2.1
         with:
           host: ${{ secrets.HOST_SERVER }}
