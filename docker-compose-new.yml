@@ -3,4 +3,4 @@ services:
     image: timetitipon/234-deploylab-frontend:2.0
     pull_policy: always
     ports:
-      - "8086:80"
+      - "9999:80"
