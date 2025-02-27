@@ -1,4 +1,4 @@
-# Stage 0: Build Angular application
+# Stage 0: Build Angular application.
 FROM node:10-alpine as node
 
 WORKDIR /app
