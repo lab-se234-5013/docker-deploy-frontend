@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  graphqlUri: 'http://44.204.74.10:8085/graphql'
+  graphqlUri: 'http://54.147.47.35:8085/graphql'
 
 };
